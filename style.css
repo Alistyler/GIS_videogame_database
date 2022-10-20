@@ -1,0 +1,23 @@
+#banner{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(79, 24, 126);
+}
+
+a{
+    color: #ffffff;
+}
+
+p{
+    color: #ffffff
+}
+
+img{
+    float: left;
+}
+
+h2 {
+    float: left;
+    padding: 1.5%;
+}
