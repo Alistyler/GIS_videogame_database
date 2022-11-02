@@ -1,0 +1,1 @@
+test.html dient als Repräsentation des Games-layouts. Die .html - dateien im Ordner Games connecten nicht richtig mit den links, die ich zuordne. Um mein CSS ist zu machen. existiert test.html.

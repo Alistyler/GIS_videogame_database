@@ -10,38 +10,54 @@
         <link rel = "stylesheet" href = "style.css" />
     </head>
     <body>
-        <header id = "banner">
-            <a href = "index.html">
+        <header>
+            <nav>
+                <a href = "index.html">
                 <img
-                    src = "/Users/aliha/Desktop/GIS/GIS_videogame_database/src/Logo.jpeg"
-                    height = "141.4";
-                    width = "93.9";
+                    src = "src/Logo.jpeg"
+                    height = "88.375";
+                    width = "58.6875";
                     alt = "mein Logo"
                     title = "Logo"
+                    class = "logo"
                 /></a>
-            <h2><a href = "database.html"><u>Database</u></a></h2>
-            <h2><a href = "community.html"><u>Community</u></a></h2>
-            <h2><a href = "suggestion.html"><u>Suggestion</u></h2></a>
-            <h2><u>More</u></h2>
-            <h2><u>List</u></h2>
-            <h2><u>History</u></h2>
-            <h2><a href = "about.html"><u>About me</u></a></h2>
-            <h2>Search</h2>
-            <h2><u>SIGN UP</u></h2>
-            <h2><u>SIGN IN</u></h2>
+                <ul>
+                    <li><h2><a href = "database.html"><u>Database</u></a></h2></li>
+                    <li><h2><a href = "community.html"><u>Community</u></a></h2></li>
+                    <li><h2><a href = "suggestion.html"><u>Suggestion</u></h2></a></li>
+                    <li><h2><u>More</u></h2></li>
+                    <li><select name = "auswahl"></li>
+                            <li><option value = "p1"><h2><u>List</u></h2></option></li>
+                            <li><option value = "p2"><h2><u>History</u></h2></option></li>
+                            <li><option value = "p3"><h2><a href = "about.html"><u>About me</u></a></h2></option></li>
+                        </select>
+                    <li><h2>Search</h2></li>
+                    <li><h2><u>SIGN UP</u></h2></li>
+                    <li><h2><u>SIGN IN</u></h2></li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <p><h1> Video Game Database</h1></p>
-            <p><h2>Press start</h2></p>
-            <p> Welcome player to MY database for video games. <br />
+            <div class = "title">
+                <h1> Video Game Database</h1>
+                <div id = "start">
+                    <button style = "background-color:#808080;color:#ffffff;border-radius:5px;">Press start</button>
+                </div>
+                <p id = description> Welcome player to MY database for video games. <br />
                 Great that you found your way here into this website. GG. <br />
                 Here is your first quest: Explore this website and gather information.
-            </p>
-            <video src = "/Users/aliha/Desktop/GIS/GIS_videogame_database/src/Video_Games.mp4" 
-            width = "640"
-            height = "360"
-            controls></video>
+                </p>
+                    <div class = "video-container">
+                        <div class="color-overlay"></div>
+                            <video autoplay loop muted plays-inline class ="BgVideo"
+                            src = "src/Video_Games.mp4"
+                            type = "video/mp4"
+                            width = auto
+                            height = "790">
+                            </video>
+                    </div>
+            </div>
         </main>
-        <footer>Created by Ali Hamid</footer>
+        <footer><p>Created by Ali Hamid</p></footer>
     </body>
 </html>
