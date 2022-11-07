@@ -8,6 +8,7 @@
         <meta name = "author" content = "Name des Autors" />
         <title> Video Game Database </title>
         <link rel = "stylesheet" href = "style.css" />
+        <script src="js/header.js" defer></script>
     </head>
     <body>
         <header>
@@ -15,8 +16,8 @@
                 <a href = "index.html">
                 <img
                     src = "src/Logo.jpeg"
-                    height = "88.375";
-                    width = "58.6875";
+                    height = "88.375"
+                    width = "58.6875"
                     alt = "mein Logo"
                     title = "Logo"
                     class = "logo"
@@ -32,8 +33,8 @@
                             <li><option value = "p3"><h2><a href = "about.html"><u>About me</u></a></h2></option></li>
                         </select>
                     <li><h2>Search</h2></li>
-                    <li><h2><u>SIGN UP</u></h2></li>
-                    <li><h2><u>SIGN IN</u></h2></li>
+                    <li><h2 class = "up"><a href = "sign_up.html"><u>SIGN UP</u></a></h2></li>
+                    <li><h2 class = "in"><a href = "sign_in.html"><u>SIGN IN</u></a></h2></li>
                 </ul>
             </nav>
         </header>
@@ -41,7 +42,7 @@
             <div class = "title">
                 <h1> Video Game Database</h1>
                 <div id = "start">
-                    <button style = "background-color:#808080;color:#ffffff;border-radius:5px;">Press start</button>
+                    <h2>Press start</h2>
                 </div>
                 <p id = description> Welcome player to MY database for video games. <br />
                 Great that you found your way here into this website. GG. <br />
@@ -52,7 +53,6 @@
                             <video autoplay loop muted plays-inline class ="BgVideo"
                             src = "src/Video_Games.mp4"
                             type = "video/mp4"
-                            width = auto
                             height = "790">
                             </video>
                     </div>

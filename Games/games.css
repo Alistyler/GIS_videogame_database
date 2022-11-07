@@ -1,0 +1,124 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+    background-color: silver;
+}
+
+/* header */
+header{
+    background-color: rgb(112, 31, 158);
+    z-index: 2;
+}
+
+nav{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+    z-index: 2;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav li .up a{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(255, 170, 80);
+    font-size: 16px;
+    border: 2px solid rgb(255, 170, 80);
+    padding: 14px 70px;
+    border-radius: 11px;
+    margin-top: 11px;
+ }
+
+ nav li .in a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(33, 89, 201);
+    font-size: 16px;
+    border: 2px solid rgb(33, 89, 201);
+    padding: 14px 70px;
+    border-radius:11px;
+    margin-top: 11px;
+ }
+
+ /* games */
+li{
+    padding: 0.5%;
+    margin: 11px;
+    font-family: "Arial";
+    font-size: 12pt;
+}
+
+.essential{
+    width: 100%;
+    background-color: rgb(94, 18, 18);
+    padding-left: 0.5%;
+    padding-top: 2%;
+    color:#ffffff;
+}
+
+/* red block*/
+.grid-essential {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+  
+.grid-item-essential {
+border-right: 2px solid black;
+padding:11%
+}
+
+/* orange block*/
+.further{
+    background-color: rgb(189, 138, 44);
+    position: absolute;
+    display:inline-flex;
+    left: 25.5%;
+    top: 29%;
+    padding-left: 1%;
+    color: white;
+    justify-content: safe;
+    z-index: 1;
+}
+
+.grid-further{
+    display:inline-grid;
+}
+
+.grid-item-further{
+    border-bottom: 2px solid black;
+    padding: 4.8%;
+}
+
+/* footer */
+#line{
+    height: 1px;
+    background: black;
+}
+
+footer{
+    color: #ffffff;
+    text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+    padding: 1%;
+    text-align: center;
+}
