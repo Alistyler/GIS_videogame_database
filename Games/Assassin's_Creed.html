@@ -7,46 +7,109 @@
         <meta name = "keywords" content = "Schlagwort 1, Schlagwort 2" />
         <meta name = "author" content = "Name des Autors" />
         <title> Video Game Database </title>
-        <link rel = "stylesheet" href = "style.css" />
+        <link rel = "stylesheet" href = "games.css" />
+        <script src="../js/header.js" defer></script>
     </head>
     <body>
+        <div id = "header_games"></div>
         <header>
-            <a href = "/Users/aliha/Desktop/GIS/index.html">
+            <nav>
+                <a href = "../index.html">
                 <img
-                    src = "/Users/aliha/Desktop/GIS/src/Logo.jpeg"
-                    height = "141.4";
-                    width = "93.9";
+                    src = "../src/Logo.jpeg"
+                    height = "88.375"
+                    width = "58.6875"
                     alt = "mein Logo"
                     title = "Logo"
+                    class = "logo"
                 /></a>
-            <h2><a href = "/Users/aliha/Desktop/GIS/database.html"><u>Database</u></a></h2>
-            <h2><a href = "/USers/aliha/Desktop/GIS/community.html"><u>Community</u></a></h2>
-            <h2><u>Suggestion</u></h2>
-            <h2><u>More</u></h2>
-            <h2><u>List</u></h2>
-            <h2><u>History</u></h2>
-            <h2><a href = "/Users/aliha/Desktop/GIS/about.html"><u>About me</u></a></h2>
-            <h2>Search</h2>
-            <h2><u>SIGN UP</u></h2>
-            <h2><u>SIGN IN</u></h2>
+                <ul>
+                    <li><h2><a href = "../database.html"><u>Database</u></a></h2></li>
+                    <li><h2><a href = "../suggestion.html"><u>Suggestion</u></h2></a></li>
+                    <li><h2><u>More</u></h2></li>
+                    <li><select name = "auswahl"></li>
+                            <li><option value = "p1"><h2><u>List</u></h2></option></li>
+                            <li><option value = "p2"><h2><u>History</u></h2></option></li>
+                            <li><option value = "p3"><h2><a href = "../about.html"><u>About me</u></a></h2></option></li>
+                        </select>
+                    <li><h2>Search</h2></li>
+                    <li><h2 class = "up"><a href = "../sign_up.html"><u>SIGN UP</u></a></h2></li>
+                    <li><h2 class = "in"><a href = "../sign_in.html"><u>SIGN IN</u></a></h2></li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <img
-            src = "/Users/aliha/Desktop/GIS/src/AC.jpeg"
-            alt = "Assassin's Creed"
-            title = "AC"
-            />
-            <h1>Name</h1>
-            <h2>Release date</h2>
-            <h2>Platforms</h2>
-            <h2>Score</h2>
-            <h2>Description</h2>
-            <h2>Genre</h2>
-            <h2>USK</h2>
-            <h2>Time to beat</h2>
-            <h3>Main Game/Story</h3>
-            <h3>100%</h3>
-            <h2>Comments</h2>
+            <div id = "image">
+                <img
+                    src = "../src/AC.png"
+                    alt = "AC"
+                    title = "Assassin's Creed"
+                />
+            </div>
+            <div class = "essential">
+                <div class = "grid-essential">
+                    <div class = "grid-item-essential"><p><h3><u>Name:</u></h3></br>Assassin's Creed</p></div>
+                        </br>
+                    <div class = "grid-item-essential"><p><h3><u>Release date:</u></h3></br>13/11/2007</p></div>
+                        </br>
+                    <div class = "grid-item-essential"><h3 class = platform><u>Platform(s):</u></h3>
+                        <ul>
+                            <li>Microsoft Windows</li>
+                            <li>Playstation 3</li>
+                            <li>Xbox 360</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class = "further">
+                <div class = "grid-further">
+                    <div  class = "grid-item-further"><p><h3><u>Description:</u></h3></br>
+                        We are in year 1191 A.D. The third crusade tears apart the Holy Land. You - as Altaïr - have to stop the hostility by taking on both parties to the conflict.</p>
+                    </div>
+                    <div class = "grid-item-further"><h3><u>Score:</u></h3></br>
+                        <div id = "score"><strong>Metascore:</strong> 81 <strong>User Score:</strong> 7.6</div></br>
+                        <p><em>(According to metacritic.com: <a href="https://www.metacritic.com/game/xbox-360/assassins-creed">Metacritic-Score</a>)</em></p>
+                    </div>
+                    <div class = "grid-item-further"><p><h3><u>Genre:</u></h3></br>Adventure; Platform</p></div>
+                    <div class = "grid-item-further"><h3><u>USK:</u></h3>
+                            <img
+                                src = "../src/USK_16.png"
+                                alt = "16"
+                                title = "USK 16"
+                                width = "128"
+                                height = "128"
+                            /></div>
+                        <div class = "grid-item-further"><p><h3 class = "time">
+                            <u>Time to beat:</u></h3></br><div id = "time"><h3><u>Main Game/Story:</u></h3><h3><u>100%:</u></h3></br></p></div></br>15h  31h
+                        </div>
+                </div>
+            </div>
+            <!--videoslider-->
+            <h1>Trailer</h1>
+            <div class="slider">
+                <div class = "slides">
+                    <input type = "radio", name = "radio-button"; id = "radio01">
+                    <input type = "radio", name = "radio-button"; id = "radio02">
+                    <input type = "radio", name = "radio-button"; id = "radio03">
+                    <div class = "slide first">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RjQ6ZtyXoA0" title="Assassin's Creed:Official Trailer--HD(1080p)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/92k5uMsCTPU" title="Assassin's Creed - Templar Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class = "slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uJag05S1FSY" title="Assassin's Creed - Launch Trailer (Final Trailer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class = "navigation">
+                    <label for = "radio01" class="btn"></label>
+                    <label for = "radio02" class="btn"></label>
+                    <label for = "radio03" class="btn"></label>
+                </div>
+
+                </div>
+            </div>
+            <h3><u>Comments</u></h3>
         </main>
         <footer>
             <p>Created by Ali Hamid</p>

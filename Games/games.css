@@ -11,6 +11,7 @@ body{
 
 /* header */
 header{
+    position: relative;
     background-color: rgb(112, 31, 158);
     z-index: 2;
 }
@@ -24,7 +25,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: safe;
-    z-index: 2;
 }
 
 nav ul li{
@@ -62,6 +62,12 @@ nav li .up a{
  }
 
  /* games */
+
+ #image{
+    position: relative;
+    z-index: 2;
+ }
+
 li{
     padding: 0.5%;
     margin: 11px;
@@ -72,9 +78,9 @@ li{
 .essential{
     width: 100%;
     background-color: rgb(94, 18, 18);
-    padding-left: 0.5%;
     padding-top: 2%;
     color:#ffffff;
+    position: relative;
 }
 
 /* red block*/
@@ -85,7 +91,8 @@ li{
   
 .grid-item-essential {
 border-right: 2px solid black;
-padding:11%
+padding: 11%;
+padding-bottom: 30%;
 }
 
 /* orange block*/
@@ -98,7 +105,6 @@ padding:11%
     padding-left: 1%;
     color: white;
     justify-content: safe;
-    z-index: 1;
 }
 
 .grid-further{
@@ -107,7 +113,104 @@ padding:11%
 
 .grid-item-further{
     border-bottom: 2px solid black;
-    padding: 4.8%;
+    padding: 3.6%;
+}
+
+.grid-item-further img{
+    margin-top: 3%;
+}
+
+#time{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+/* video slider*/
+.slider{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.slider h1{
+    position: relative;
+    color: #ffffff;
+    left: 75%;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide iframe{
+    width: 800px;
+    height: 500px;
+}
+
+.navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    border:2px solid silver;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.btn:hover{
+    background: black;
+}
+
+#radio01:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio02:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio03:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio04:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio05:checked ~.first{
+    margin-left: -80%;
+}
+
+#radio06:checked ~.first{
+    margin-left: -100%;
 }
 
 /* footer */
