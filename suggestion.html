@@ -9,19 +9,23 @@
         <title> Video Game Database </title>
         <link rel = "stylesheet" href = "style.css" />
         <script src = "js/header.js" defer></script>
+        <script src = "js/feedback.js" defer></script>
     </head>
     <body>
         <header></header>
         <main>
             <div class = "suggest">
-                <h1 id = "box"><u>Suggestion Box</u></h1>
-                <p id = "suggest_text"><h3>Anything missing? Write your suggestion in regards to: <br/>
-                - <srong>games</srong><br/>
-                - <strong>design</strong><br/>
-                - <strong>functions</strong><br/>
-            </h3></p>
+                <h1><u>Suggestion Box</u></h1>
+                <h3>Do you miss something? </br>
+                    Please let me know your opinion in the suggestion box.</h3>
             </div>
-            <div id = "submit"><button style = "background-color:#808080;color:#ffffff;border-radius:5px;">Submit</button></div>
+            <input id = "input" type = "text", height="200px"/>
+            <div id = "submit">
+                <button style = "background-color:#808080;color:#ffffff;border-radius:5px;">Submit</button>
+            </div>
+            <div id = "feedback">
+                <h2><u>Comments</u></h2>
+            </div>
         </main>
         <div id = "line">
             <footer>

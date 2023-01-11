@@ -69,11 +69,23 @@ let nav = document.createElement('nav');
                 li_select.appendChild(select);
         let more = ul.append(li_select);
 
-        let title2_search = document.createElement('h2');
-            title2_search.textContent = "Search";
+        let div_search_box = document.createElement('div');
+            div_search_box.class = "search-box";
+            let div_search = document.createElement('div');
+                let input_search = document.createElement('input');
+                    input_search.type = "text";
+                    input_search.name = "q";
+                    input_search.id = "";
+                    input_search.placeholder = "search...";
+                let search_button = document.createElement('button');
+                    let search_icon = document.createElement('i');
+                        search_icon.class = "search";
+                    search_button.appendChild(search_icon);
+                div_search.append(input_search, search_button);
+            div_search_box.appendChild(div_search);
         let li_search = document.createElement('li');
-            li_search.appendChild(title2_search);
-        let search = ul.appendChild(li_search);
+            li_search.appendChild(div_search_box);
+        let search = ul.appendChild(li_search); 
 
         let u_up = document.createElement('u');
             u_up.textContent = "SIGN UP";
