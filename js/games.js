@@ -1,6 +1,6 @@
 let div_games = document.querySelector('div');
 
-//Array for games information
+//Array for games information (JSON)
 const games = [{
     id: 1,
     image_games: {
@@ -371,8 +371,12 @@ let div_essential_games = document.createElement('div');
                 div_navigation.append(label1, label2, label3);
         div_trailer.append(div_slides, div_navigation);     
 
-    div_games.id = "Among_us";
+    div_games.id = games[1];
     div_games.append(div_image_games, div_essential_games, div_further_games, div_trailer);
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+console.log(id);
 
 console.log(div_games);
 

@@ -1,11 +1,22 @@
-let input = document.createElement('input');
-let username = document.createElement('p');
+let form = document.getElementById('form');
+let input = document.getElementById('input');
 
-const feedback = [{
-    key: username,
-    value: input,
-}]
+form.addEventListener('submit', Submit);
 
-localStorage.setItem('username', 'input');
+function Submit(event) {
+    event.preventDefault() //prevents the form from autosubmittting
 
-console.log(JSON.parse(feedback));
+    console.log(input.value);
+}
+
+let userInput = localStorage.getItem("userInput");
+
+function save(){
+    localStorage.setItem('userInput', input.value)
+    document.getElementById('savedText').innerHTML = input.value;
+}
+
+function get() {
+    userInput;
+    document.getElementById('openendText').innerHTML = input.value;
+}

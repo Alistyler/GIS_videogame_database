@@ -16,15 +16,21 @@
         <main>
             <div class = "suggest">
                 <h1><u>Suggestion Box</u></h1>
-                <h3>Do you miss something? </br>
+                <h3>Do you miss something like games or functions of this website or anything else? </br>
                     Please let me know your opinion in the suggestion box.</h3>
             </div>
-            <input id = "input" type = "text", height="200px"/>
+            <form id = "form">
+                <input id = "input" type = "text", placeholder = "Type text..."/>
+            </form>
             <div id = "submit">
-                <button style = "background-color:#808080;color:#ffffff;border-radius:5px;">Submit</button>
+                <button onClick = "save()", style = "background-color:#808080;color:#ffffff;border-radius:5px;">Submit</button>
             </div>
-            <div id = "feedback">
+            <div id = "feedback", onload="get()">
                 <h2><u>Comments</u></h2>
+                <div onload = "get()">
+                    <p id = "savedText"></p>
+                    <p id = "openText"></p>
+                </div>
             </div>
         </main>
         <div id = "line">
