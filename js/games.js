@@ -1,9 +1,9 @@
 let div_games = document.querySelector('div');
 
-const games1 = [];
+// const game = "";
 
 //Array for game information (JSON)
-const game = [{
+const games2 = [{
     id: 1,
     image_games: {
         src: "../src/Among_us.png",
@@ -191,21 +191,21 @@ const game = [{
     }
 }
 ]
-// const params = new URLSearchParams(localStorage.setItem(div_games, game[id]));
+// const params = new URLSearchParams(localStorage.setItem(div_games, game));
 // const id = params.get('id');
 // const id = 0;
-console.log(id);
+// console.log(id);
 
-const id = new URLSearchParams(window.location.search).get('id');
+let id = new URLSearchParams(window.location.search).get('id');
 
-requestTextWithGET();
+window.addEventListener("load", () => { requestJSONWithGET() })
 
-async function requestTextWithGET(url) {
+async function requestJSONWithGET(url) {
 
-    const url = "http://127.0.0.1:3000" + `/getGame?id=${id}`;
+    url = "http://127.0.0.1:3000" + `/getGame?id=${id}`;
     const response = await fetch(url);
     console.log('Response', response); // komplettes Response Objekt
-    game = await response.json();
+    let game = await response.json();
     console.log(game);
     generateGameInfo(game);
 }
@@ -216,9 +216,9 @@ function generateGameInfo(game) {
     let div_image_games = document.createElement('div');
     div_image_games.id = "image";
     let image_games = document.createElement('img');
-    image_games.src = game[id].image_games.src;
-    image_games.alt = game[id].image_games.alt;
-    image_games.title = game[id].image_games.title;
+    image_games.src = game.image_games.src;
+    image_games.alt = game.image_games.alt;
+    image_games.title = game.image_games.title;
     let cover_image_games = div_image_games.appendChild(image_games);
 
     let div_essential_games = document.createElement('div');
@@ -230,7 +230,7 @@ function generateGameInfo(game) {
     let u_name_games = document.createElement('u');
     u_name_games.textContent = "Name:";
     let br_name_games = document.createElement('br');
-    let name_games = game[id].name_games;
+    let name_games = game.name_games;
     br_name_games.append(name_games);
     u_name_games.appendChild(br_name_games);
     let h3_name_games = document.createElement('h3');
@@ -244,7 +244,7 @@ function generateGameInfo(game) {
     let u_release_games = document.createElement('u');
     u_release_games.textContent = "Release date:";
     let br_release_games = document.createElement('br');
-    let release_games = game[id].release_games;
+    let release_games = game.release_games;
     br_release_games.append(release_games);
     u_release_games.appendChild(br_release_games);
     let h3_release_games = document.createElement('h3');
@@ -264,7 +264,7 @@ function generateGameInfo(game) {
     p_platform_games.appendChild(h3_platform_games);
     let ul_games = document.createElement('ul');
     let li_games = document.createElement('li');
-    let platform_games = game[id].platform_games;
+    let platform_games = game.platform_games;
     li_games.append(platform_games);
     ul_games.appendChild(li_games);
     div_grid_item_essential3_games.append(p_platform_games, ul_games);
@@ -280,7 +280,7 @@ function generateGameInfo(game) {
     let u_description_games = document.createElement('u');
     u_description_games.textContent = "Description"
     let p_description_games = document.createElement('p');
-    let description_games = game[id].description_games;
+    let description_games = game.description_games;
     p_description_games.append(description_games);
     // u_description_games.appendChild(br_description_games);
     let h3_description_games = document.createElement('h3');
@@ -289,29 +289,12 @@ function generateGameInfo(game) {
     // p_description_games.appendChild(h3_description_games);
     div_grid_item_further1_games.append(h3_description_games, p_description_games);
 
-    // div_further_games.className = "further";
-    // let div_grid_further_games = document.createElement('div');
-    //     div_grid_further_games.className = "grid-further";
-    //     let div_grid_item_further1_games = document.createElement('div');
-    //         div_grid_item_further1_games.className = "grid-item-further";
-    //         let u_description_games = document.createElement('u');
-    //             u_description_games.textContent = "Description"
-    //             let br_description_games = document.createElement('p');
-    //                 let description_games = game[id].description_games;
-    //                 br_description_games.append(description_games);
-    //             u_description_games.appendChild(br_description_games);
-    //         let h3_description_games = document.createElement('h3');
-    //             h3_description_games.appendChild(u_description_games);
-    //         let p_description_games = document.createElement('p');
-    //             p_description_games.appendChild(h3_description_games);
-    //     div_grid_item_further1_games.appendChild(p_description_games);
-
     let div_grid_item_further2_games = document.createElement('div');
     div_grid_item_further2_games.className = "grid-item-further";
     let u_score_games = document.createElement('u');
     u_score_games.textContent = "Score";
     let br_score_games = document.createElement('br');
-    let score_games = game[id].score_games;
+    let score_games = game.score_games;
     br_score_games.append(score_games);
     u_score_games.appendChild(br_score_games);
     let h3_score_games = document.createElement('h3');
@@ -325,7 +308,7 @@ function generateGameInfo(game) {
     let u_genre_games = document.createElement('u');
     u_genre_games.textContent = "Genre";
     let br_genre_games = document.createElement('br');
-    let genre_games = game[id].genre_games;
+    let genre_games = game.genre_games;
     br_genre_games.append(genre_games);
     u_genre_games.appendChild(br_genre_games);
     let h3_genre_games = document.createElement('h3');
@@ -339,7 +322,7 @@ function generateGameInfo(game) {
     let u_USK_games = document.createElement('u');
     u_USK_games.textContent = "USK";
     let br_USK_games = document.createElement('br');
-    let USK_games = game[id].USK_games;
+    let USK_games = game.USK_games;
     br_USK_games.append(USK_games);
     u_USK_games.appendChild(br_USK_games);
     let h3_USK_games = document.createElement('h3');
@@ -356,12 +339,12 @@ function generateGameInfo(game) {
     let beatingTime_games_main = document.createElement('h4')
     beatingTime_games_main.textContent = "Main/Story:";
     let br_beatingTime_games_main = document.createElement('br');
-    let beatingTime_games_story = game[id].beatingTime_games.main_game_or_story;
+    let beatingTime_games_story = game.beatingTime_games.main_game_or_story;
     br_beatingTime_games_main.append(beatingTime_games_story);
     let beatingTime_games_hundred = document.createElement('h4')
     beatingTime_games_hundred.textContent = "100%:";
     let br_beatingTime_games_hundred = document.createElement('br');
-    let br_beatingTime_games_complete = game[id].hundred_percent;
+    let br_beatingTime_games_complete = game.hundred_percent;
     br_beatingTime_games_hundred.append(br_beatingTime_games_complete);
     br_beatingTime_games.append(beatingTime_games_main, beatingTime_games_hundred);
     u_beatingTime_games.appendChild(br_beatingTime_games);
@@ -415,7 +398,7 @@ function generateGameInfo(game) {
     div_navigation.append(label1, label2, label3);
     div_trailer.append(div_slides, div_navigation);
 
-    div_games.id = game[id].id;
+    div_games.id = game.id;
     div_games.append(div_image_games, div_essential_games, div_further_games, div_trailer);
 
     console.log(div_games);
